@@ -1,0 +1,78 @@
+<%- include('partials/_header.ejs') %>
+<section class="contenedor wrapper">
+    <div class="contenido-panel">
+        <div class="usuario">
+            <div class="imagen-usuario">
+                <a href=""><img src="partials/img/1200px-User_icon_2.svg.png" alt=""></a>
+            </div>
+            <nav class="navegacion-usuario">
+                <a href="../administradores/index.html">Administradores</a>
+                <a href="../clientes/index.html">Clientes</a>
+                <a href="">Productos</a>
+                <a href="../categorias/index.html">Categoria</a>
+                <a href="../pedidos/index.html">Pedidos</a>
+            </nav>
+        </div>
+        <div class="datos-panel">
+            <div class="añadir">
+                <a class="boton boton-verde" href="/registro/"><i class="fas fa-plus"></i> Añadir nuevo producto</a>
+            </div>
+            <div class="tabla">
+                <table class="">
+                    <tr>
+                        <th><strong></strong></th>
+                        <th><strong>Producto</strong></th>
+                        <th><strong>Marca</strong></th>
+                        <th><strong>Precio</strong></th>
+                        <th><strong>Imagen</strong></th>
+                        <th><strong>Accion</strong></th>
+                    </tr>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>Producto</td>
+                        <td>Marca</td>
+                        <td>$200</td>
+                        <td class="centrar-texto">
+                                    <img src="../../img/s7d5.scene7.com10.jpg" alt="" width="50">
+                        </td>
+                        <td class="accion">
+                            <a class="a-actualizar" href=""><i class="fas fa-pencil-alt"></i></a>
+                            <a class="a-eliminar" href=""><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>2</td>
+                        <td>Producto</td>
+                        <td>Marca</td>
+                        <td>$200</td>
+                        <td class="centrar-texto">
+                                    <img src="../../img/s7d5.scene7.com10.jpg" alt="" width="50">
+                        </td>
+                        <td class="accion">
+                            <a class="a-actualizar" href=""><i class="fas fa-pencil-alt"></i></a>
+                            <a class="a-eliminar" href=""><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Producto</td>
+                        <td>Marca</td>
+                        <td>$200</td>
+                        <td class="centrar-texto">
+                                    <img src="../../img/s7d5.scene7.com10.jpg" alt="" width="50">
+                        </td>
+                        <td class="accion">
+                            <a class="a-actualizar" href=""><i class="fas fa-pencil-alt"></i></a>
+                            <a class="a-eliminar" href=""><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<%- include ('partials/_footer.ejs') %>

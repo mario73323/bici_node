@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    scroll-behavior: smooth;
+}
+.cover-page{
+    height: 30vh;
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding-top: 70px;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+.main-box{
+    height: 100vh;
+    width: 100%;
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(67, 67, 67, 0.7), hsla(0, 0%, 0%, 0.7));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(67, 67, 67, 0.7) 0%, rgba(0, 0, 0, 0.7) 150%), url(../img/scott_ransom_eride_accion.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+section{
+    padding: 10px;
+}
+.form-box{
+    width: 500px;
+    margin-left: 50%;
+    margin-top: 8vh;
+    display: inline-block;
+    position: absolute;
+}
+
+.form-box__item,
+.form-box__item-text{
+    margin: 10px;
+    width: 100%;
+    height: 4em;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.356);
+    outline: none;
+    font-size: 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px white;
+    color: #000000;
+    border: none;
+}
+::placeholder{
+    color: #000000;
+    font-weight: bold;
+}
+.form-box__item-text{
+    height: 20%;
+    resize: none;
+}
+
+.form-box__button{
+    height: 50px ;
+    width: 80px;
+    margin-left: 10px;
+    background-color: #434343;
+    color: #ffffff;
+    border: none;
+}
+.form-box__button:hover{
+    background: rgba(67, 67, 67, 0.5);
+    border: 2px solid #434343;
+}
+
+iframe{
+    height: 400px;
+    width: 400px;
+    border-radius: 3%;
+}
+
+.section-footer{
+    width: 100%;
+    height: 10%;
+    background-color: #464444;
+    color: #ffffff;
+    text-align: center;
+}
+
+ul{
+    display: inline-block;
+    margin-top: 10px;
+
+}
+li{
+    display: inline-block;
+}
+.img-red{
+    width: 30px;
+}
+
+.copyright{
+    padding-bottom: 30px;
+}
+
+/*about*/
+
+.about{
+    background-image: linear-gradient(to right, rgba(67, 67, 67, 0.5) 0%, rgba(0, 0, 0, 0.5) 150%), url(../img/acerca.png);
+    height: 500px;
+    width: 100%;
+}
+.title{
+    margin: 20px;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+}
+.title-content{
+    margin: 20px;
+    font-size: 2em;
+    color: white;
+}
+
+@media screen and (max-width: 500px){
+    .main{
+        width: 100%;
+    }
+    iframe{
+        height: 50%;
+        width: 50%;
+        margin: 5px;
+    }
+    .main-box{
+        height: 135vh;
+    }
+    .form-box{
+        margin-left: 1px;
+        margin-top: 50%;
+        width: 70%;
+    }
+
+
+}
