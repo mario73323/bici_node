@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles_panel.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <title>Productos</title>
+
+</head>
+
+<body>
+    <header class="site-header borde-inferior">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="/panel">
+                    <h1 class="no-margin">Only<span>Moto</span></h1>
+                </a>
+                <a href="/panel">Panel de administración</a>
+                <a href="../../index.html">Cerrar sesion <i class="fas fa-door-open"></i></a>
+            </div>
+        </div>
+    </header>
+    <section class="contenedor wrapper">
+        <div class="contenido-panel">
+            <div class="usuario">
+                <div class="imagen-usuario">
+                    <a href=""><img src="/img/1200px-User_icon_2.svg.png" alt=""></a>
+                </div>
+                <nav class="navegacion-usuario">
+                    <a href="/panel/administradores">Administradores</a>
+                    <a href="/panel/clientes">Clientes</a>
+                    <a href="/panel/producto">Productos</a>
+                    <a href="/panel/categoria">Categoria</a>
+                    <a href="/panel/pedidos/index.html">Pedidos</a>
+                </nav>
+            </div>
+            <div class="datos-panel">
+                <div class="añadir">
+                    <a class="boton boton-verde" href="/panel/producto/registro"><i class="fas fa-plus"></i> Añadir nuevo producto</a>
+                </div>
+                <div class="tabla">
+                    <table class="">
+                        <tr>
+                            <th><strong></strong></th>
+                            <th><strong>Producto</strong></th>
+                            <th><strong>Precio</strong></th>
+                            <th><strong>Imagen</strong></th>
+                            <th><strong>Accion</strong></th>
+                        </tr>
+                        <% if (data) {%>
+                            <% for (let i=0; i<data.length; i++) { %>
+                                <tr>
+                                    <td><%= (i+1) %></td>
+                                    <td><%= data[i].producto_nombre %></td>
+                                    <td>$ <%= data[i].producto_precio %></td>
+                                    <td>SIN FOTO</td>
+                                    <td class="accion">
+                                        <a class="a-actualizar" href="/panel/producto/editar/<%= data[i].producto_id %>"><i class="fas fa-pencil-alt"></i></a>
+                                        <a class="a-eliminar" href="/panel/producto/delete/<%= data[i].producto_id %>"><i class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>    
+                            <% } %>
+                        <% }else { %>
+                            <tr>
+                                <td colspan="6">NO HAY REGISTROS</td>
+                            </tr>
+                        <% } %>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="/panel">Panel de administrador</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservados 2020</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -238,4 +238,41 @@ table th{
     display: flex;
     justify-content: space-between;
 }
+label{
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+input:not([Type="submit"]),
+textarea,
+select{
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+
+textarea{
+    height: 20rem;
+}
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+}
+fieldset{
+    margin-bottom: 1rem;
+}
+.enviar a{
+    padding:.5rem;
+}
 

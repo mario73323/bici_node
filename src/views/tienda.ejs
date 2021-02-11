@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/stylesU.css">
+    <link rel="stylesheet" href="/css/all.css">
+    
+    <title>Tienda</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="/index.html" class="navbar-brand ">ONLY MOTO</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#t">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="t">
+                    <ul class="navbar-nav mr-auto ml-auto">
+                        <li class="nav-item"><a class="nav-link pr-5" href="/tienda.html">TIENDA</a></li>
+                        <li class="nav-item"><a class="nav-link pr-5" href="/contacto.html">CONTACTO</a></li>
+                        <li class="nav-item"><a class="nav-link pr-5" href="/quienes-somos.html">QUIENES SOMOS</a></li>
+                        <li class="nav-item"><a class="nav-link pr-5" href="/carrito.html">CARRITO</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="inicio_sesion.html"><span class="">INICIAR SESIÓN</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="tienda">
+        <div class="bac-tienda">
+            <h2 class="centrar blanco">Tienda</h2>
+        </div>
+        <h3 class="centrar">Todos los productos</h3>
+        <div class="contenedor-tienda">
+            <div class="tienda-filtros">
+                <div class="cabeza-cat">
+                    <h3>Categorias</h3>
+                    <div id="menu-mobil">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+                <div class="contenido-filtros">
+                    <ul>
+                        <% for (let i=0; i<cat.length; i++) { %>
+                            <a href=""><li><h4><%= cat[i].categoria_descripcion %></h4></li></a>
+                        <% }%>
+                    </ul>
+                </div>
+            </div>
+            <div class="contenedor-productos" id="lista-productos">
+                <% for (let i=0; i<product.length; i++) { %>
+                <div class="producto">
+                    <div class="producto-img">
+                        <a href="/producto/<%= product[i].producto_id %>">
+                            <img src="/img/s7d5.scene7.com.jpg" alt="">
+                        </a>
+                    </div>
+                    <p> <%= product[i].producto_nombre %></p>
+                    <p>$ <%= product[i].producto_precio %></p>
+                    <a href="" class="boton boton-gris agregarr">Añadir al carrito</a>
+                </div>
+                <% }%>
+            </div>
+
+        </div>
+    </section>
+    <footer class="bg-dark">
+        <p class="text-white text-center">&copy; 2021 ONLY MOTO</p>
+    </footer>
+     <!-- jQuery and JS bundle w/ Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="css/js/bootstrap.min.js"></script>
+    <script src="js/tienda.js"></script>
+</body>
+
+</html>
